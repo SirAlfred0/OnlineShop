@@ -1,0 +1,8 @@
+.mdc-fab
+{
+    position: absolute;
+}
+
+:host{
+    display: block
+}

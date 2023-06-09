@@ -1,0 +1,57 @@
+<h1 routerLink="/" class="text-6xl text-center font-bold text-white cursor-pointer">Eflyer</h1>
+
+<div class="mt-8 w-full md:w-3/5 mx-auto px-4 py-2 flex flex-col-reverse sm:flex-row justify-start items-center">
+    <div class="flex flex-row justify-center items-center gap-8 py-4">
+        <button mat-icon-button (click)="onSideNavToggle()">
+            <mat-icon class="text-white">
+                menu
+            </mat-icon>
+        </button>
+
+        <div>
+            <input type="text" placeholder="searchSomething" class="px-4 py-2 rounded-tl-lg rounded-bl-lg w-auto sm:w-[450px] focus:outline-none">
+            <button class="align-middle px-2 py-[0.30rem] bg-[#d36225] rounded-tr-lg rounded-br-lg">
+                <mat-icon class="text-white">
+                    search
+                </mat-icon>
+            </button>
+        </div>
+       
+    </div>
+    <div class="flex flex-row justify-center items-center gap-8 ml-0 sm:ml-8 flex-auto">
+        <a class="text-white cursor-pointer" href="#">
+            <mat-icon class="align-middle">
+                shopping_cart
+            </mat-icon>
+            card
+        </a>
+        <a class="text-white cursor-pointer" href="#">
+            <mat-icon class="align-middle">
+                person
+            </mat-icon>
+            panel
+        </a>
+    </div>
+   
+</div>
+
+
+<mat-toolbar color="primary" class="fixed top-0 left-0 z-50" appToolbarVisibility>
+    <div class="flex justify-between items-center w-full">
+        <div>
+            <button mat-icon-button class="align-middle" (click)="onSideNavToggle()">
+              <mat-icon>menu</mat-icon>
+            </button>
+            <span class="font-extrabold text-2xl ml-4 align-middle">Eflyer</span>
+        </div>
+
+        <div>
+            <button mat-icon-button matTooltip="card">
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="panel">
+                <mat-icon>person</mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-toolbar>

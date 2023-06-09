@@ -1,0 +1,20 @@
+<section class="relative">
+    <button (click)="onPrevious()" [disabled]="!isPreviousValid" mat-fab color="primary" class="absolute left-4 top-[50%] translate-y-[-50%] z-40">
+        <mat-icon class="text-white">arrow_back</mat-icon>
+    </button>
+    <div class="flex flex-row items-start justify-center" [@animFade]="clickCounter">
+        <ng-container *ngFor="let slide of slides();let i = index">
+            <ng-container *ngIf="i == this.currentSlide">
+                <ul class="list-none w-full h-full flex gap-6 flex-wrap justify-center items-center">
+                    <ng-container *ngFor="let item of slide">
+                        <li [innerHTML]="sanitize(item.elRef.nativeElement.outerHTML)" (click)="onSlideClick(item)">
+                        </li>
+                    </ng-container>
+                </ul>
+            </ng-container>
+        </ng-container>
+    </div>
+    <button (click)="onNext()" [disabled]="!isNextValid" mat-fab color="primary" class="absolute right-4 top-[50%] translate-y-[-50%] z-40">
+        <mat-icon class="text-white">arrow_forward</mat-icon>
+    </button>
+</section>

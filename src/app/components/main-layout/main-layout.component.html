@@ -1,0 +1,32 @@
+<mat-drawer-container>
+  <mat-drawer position="start" mode="over" class="px-5" [(opened)]="sideNavToggleStatus">
+    <app-main-side-nav></app-main-side-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <header class="bg-[url('assets/images/banner-bg.png')] bg-no-repeat bg-cover min-h-[40rem] pt-3">
+    
+      <app-main-header (onToggle)="onSideNavToggle()"></app-main-header>
+  
+      <div class="h-[300px] flex justify-center items-center">
+        <silder-controller Mode="circle" [Interval]="4000" (onSelect)="onSlideClick($event)" class="w-full">
+          <ng-container *ngFor="let item of ads; let i = index">
+              <div slide [data]="item" class="flex flex-col gap-9 justify-start items-center">
+                <p class="text-white text-center font-extrabold text-2xl">{{item.text}}</p>
+                <button type="button" mat-flat-button >{{item.actionName}}</button>
+              </div>
+          </ng-container>
+        </silder-controller>
+      </div>
+     
+  
+    </header>
+  
+    <router-outlet></router-outlet>
+  
+    <footer>
+      <app-main-footer></app-main-footer>
+    </footer>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+

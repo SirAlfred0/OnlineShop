@@ -1,0 +1,87 @@
+@use '@angular/material' as mat;
+@include mat.core();
+$bright-navy-blue-palette: (
+  50: #fefcea,
+  100: #fdf7ca,
+  200: #fcf1a9,
+  300: #fbec89,
+  400: #f9e673,
+  500: #f7e15f,
+  600: #f6d25c,
+  700: #f0bc54,
+  800: #eaa64c,
+  900: #e08340,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+$gainsboro-palette: (
+  50: #f2e9fb,
+  100: #dcc8f6,
+  200: #c5a4f0,
+  300: #ad7deb,
+  400: #9a5de5,
+  500: #873ddf,
+  600: #7d37d8,
+  700: #6f2ecf,
+  800: #6227c8,
+  900: #4d19ba,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+$crimson-palette: (
+  50: #ffebef,
+  100: #ffced5,
+  200: #f59b9e,
+  300: #ee7479,
+  400: #fa5156,
+  500: #ff3d3c,
+  600: #df2935,
+  700: #d72638,
+  800: #d2212e,
+  900: #c40e21,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+$bluesky-primary: mat.define-palette($bright-navy-blue-palette, 700, 300, 900);
+$bluesky-accent: mat.define-palette($gainsboro-palette, 300, 100, 500);
+$bluesky-warn: mat.define-palette($crimson-palette, 700);
+$bluesky-theme: mat.define-light-theme((
+  color: (
+    primary: $bluesky-primary,
+    accent: $bluesky-accent,
+    warn: $bluesky-warn,
+  )
+));
+@include mat.all-component-themes($bluesky-theme);
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
