@@ -1,1 +1,122 @@
-<p>gift-ideas works!</p>
+
+<main class="my-8 px-4">
+    <div class="flex flex-row">
+        <div class="w-full sm:w-3/4 px-1">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Complete form then we suggest best gift ideas base on your choices</mat-card-title>
+                </mat-card-header>
+                
+                <mat-card-content>
+                    <form class="flex flex-wrap gap-8 mt-10" [formGroup]="queryForm">
+                        <mat-form-field appearance="outline" class="w-full sm:w-auto">
+                            <mat-label>Sexsual orientation</mat-label>
+                            <mat-select formControlName="SexsualOrientation">
+                                <mat-option [value]="1">heterosexual</mat-option>
+                                <mat-option [value]="2">bisexual</mat-option>
+                                <mat-option [value]="3">homosexual</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="w-full sm:w-auto">
+                            <mat-label>Sexuality</mat-label>
+                            <mat-select formControlName="Sexuality">
+                                <mat-option [value]="1">man</mat-option>
+                                <mat-option [value]="2">woman</mat-option>
+                                <mat-option [value]="3">transgender</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="w-full sm:w-auto">
+                            <mat-label>Hobbies</mat-label>
+                            <mat-select [multiple]="true" formControlName="Hobbies">
+                                <mat-option [value]="1">travelling and nature tourist</mat-option>
+                                <mat-option [value]="2">driving</mat-option>
+                                <mat-option [value]="3">sports</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="w-full sm:w-auto">
+                            <mat-label>Gift occasion</mat-label>
+                            <mat-select formControlName="GiftOccasion">
+                                <mat-option [value]="1">birth day</mat-option>
+                                <mat-option [value]="2">baby shower ceremony</mat-option>
+                                <mat-option [value]="3">marriage anniversary</mat-option>
+                                <mat-option [value]="4">first date anniversary</mat-option>
+                                <mat-option [value]="5">death anniversary</mat-option>
+                                <mat-option [value]="6">wedding ceremony</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="w-full sm:w-auto">
+                            <mat-label>Relation</mat-label>
+                            <mat-select formControlName="Relation">
+                                <mat-option [value]="1">partner</mat-option>
+                                <mat-option [value]="2">relatives</mat-option>
+                                <mat-option [value]="3">friend</mat-option>
+                                <mat-option [value]="4">child</mat-option>
+                                <mat-option [value]="5">parent</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </form>
+                </mat-card-content>
+                <mat-card-actions align="end">
+                    <button mat-button (click)="onSearch()">search</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <div class="my-3 px-3">
+                <h4 class="inline-block mr-5 align-top">sort by</h4>
+                <mat-chip-listbox class="inline-block">
+                    <mat-chip-option color="accent">Eflyer Recommendation</mat-chip-option>
+                    <mat-chip-option color="accent">Least Price</mat-chip-option>
+                    <mat-chip-option color="accent">Most Price</mat-chip-option>
+                </mat-chip-listbox>
+            </div>
+
+            <div class="flex flex-wrap items-start justify-center gap-8">
+                <ng-container *ngFor="let item of gifts">
+                    <mat-card class="rounded-tr-2xl rounded-bl-2xl w-full sm:w-[400px]">
+                        <mat-card-header>
+                            <mat-card-title>{{item.title}}</mat-card-title>
+                            <mat-card-subtitle><span class="text-red-600 font-semibold">price </span> {{item.price}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img matCardImage class="h-96 object-scale-down" [src]="item.image">
+                        <mat-card-content>
+                            <h5><span class="font-bold">category: </span> {{item.category}}</h5>
+                            <p>{{item.description}}</p>
+                        </mat-card-content>
+                        <mat-card-actions align="end">
+                            <button mat-button color="primary">see more</button>
+                            <button mat-button color="accent">add to card</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+            </div>
+        </div>
+        <div class="hidden sm:block w-1/4 px-1">
+            <mat-card appFloatingElement [Float]="600">
+                <mat-card-content>
+                    <form class="flex flex-col items-stretch justify-start mt-3" [formGroup]="filterForm">
+                        <div>
+                            <h4 class="font-bold">Price Range</h4>
+                            <mat-slider [displayWith]="displayPriceWith" [min]="minPrice" [max]="maxPrice" class="w-full" color="accent" [discrete]="true">
+                                <input formControlName="MinPrice" matSliderStartThumb>
+                                <input formControlName="MaxPrice" matSliderEndThumb>
+                            </mat-slider>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Categories</h4>
+                            <mat-selection-list [multiple]="true" color="accent" formControlName="CategoryId">
+                                <ng-container *ngFor="let item of categories">
+                                    <mat-list-option [value]="item.id">{{item.title}}</mat-list-option>
+                                </ng-container>
+                            </mat-selection-list>
+                        </div>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+   
+</main>

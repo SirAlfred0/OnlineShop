@@ -17,6 +17,8 @@ export class FloatingElementDirective {
     if(window.scrollY >= this.float)
     {
       this.renderer.setStyle(this.elRef.nativeElement, 'margin-top', (window.scrollY) - this.float + 'px')
+    }else{
+      this.renderer.setStyle(this.elRef.nativeElement, 'margin-top', '0' + 'px')
     }
   }
 
