@@ -1,1 +1,19 @@
-<p>home works!</p>
+
+<main class="py-8">
+    <ng-container *ngFor="let item of homeProducts">
+        <h3 class="text-center font-semibold text-2xl mt-16 mb-3">{{item.category}}</h3>
+        
+            <silder-controller Mode="circle" [Interval]="10000" (onSelect)="onSlideClick($event)" [Count]="3" class="w-full">
+                <ng-container *ngFor="let product of item.products">
+                    <mat-card slide [data]="product" class="w-full sm:w-[400px]">
+                        <mat-card-header>
+                            <mat-card-title>{{product.name}}</mat-card-title>
+                            <mat-card-subtitle><span class="text-red-600 font-medium text-base">From </span>{{product.price}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image [src]="product.image" class="h-96 object-scale-down">
+                    </mat-card>
+                </ng-container>
+            </silder-controller>
+        
+    </ng-container>
+</main>

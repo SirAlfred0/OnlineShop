@@ -60,7 +60,10 @@ export class DataService {
           id: "1",
           image: "assets/images/products/fashion/2.png",
           name: "Man T-Shirt",
-          params: {},
+          params: {
+            q: '20',
+            t: '17'
+          },
           price: 20
         },
         {
