@@ -1,0 +1,24 @@
+<div class="flex flex-row shadow py-3 sm:py-12 px-2 sm:px-4 w-full sm:w-fit">
+    <div class="hidden sm:block">
+        <img [src]="data.brandImg" class="rounded-full w-36 h-36 object-cover" >
+    </div>
+    <div class="px-0 sm:px-8 flex-1">
+        <h2>
+            <img [src]="data.brandImg" class="rounded-full w-12 h-12 object-cover inline-block sm:hidden">
+            {{data.name}}
+        </h2>
+        <div class="mt-5 ml-12 flex flex-col gap-3">
+            <h3>{{data.areaOfWork}}</h3>
+            <h3><mat-icon class="align-middle">phone</mat-icon> {{data.phoneNumber}}</h3>
+            <h3><mat-icon class="align-middle">email</mat-icon> {{data.email}}</h3>
+            <h3><mat-icon class="align-middle">language</mat-icon> {{data.website}}</h3>
+        </div>
+    </div>
+    <div class="flex flex-col gap-3 items-end justify-start">
+        <ng-container *ngFor="let item of data.socialMedia">
+            <a mat-icon-button [href]="item.address" [matTooltip]="item.name" matTooltipPosition="below" matTooltipClass="text-xs" target="_blank">
+                <img class="align-middle social-img" [src]="item.image" [alt]="item.name">
+            </a>
+        </ng-container>
+    </div>
+</div>

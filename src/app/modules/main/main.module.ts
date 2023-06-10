@@ -18,6 +18,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatListModule } from '@angular/material/list';
 import { MatSliderModule } from '@angular/material/slider';
+import { BestSellerCardComponent } from './components/best-seller-card/best-seller-card.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { MatSliderModule } from '@angular/material/slider';
     GiftIdeasComponent,
     NewReleasesComponent,
     BestSellersComponent,
-    CustomerServiceComponent
+    CustomerServiceComponent,
+    BestSellerCardComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +44,8 @@ import { MatSliderModule } from '@angular/material/slider';
     MatSelectModule,
     MatChipsModule,
     MatListModule,
-    MatSliderModule
+    MatSliderModule,
+    MatTooltipModule
   ]
 })
 export class MainModule { }

@@ -284,28 +284,144 @@ export class DataService {
       {
         id: "1",
         name: "cocacola",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iure laborum repellat eos officia dolorem sunt non est perferendis necessitatibus nostrum iusto error doloribus repellendus neque, vel, corporis aliquam quibusdam.",
+        email: "cocacola@gmail.com",
+        phoneNumber: "0123456789",
+        website: "www.cocacola.com",
+        socialMedia: [
+          {
+            address: "#",
+            image: "assets/images/social/instagram.png",
+            name: "instagram"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/twitter.png",
+            name: "twitter"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/facebook.png",
+            name: "facebook"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/linkedin.png",
+            name: "linkedin"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/telegram.png",
+            name: "telegram"
+          }
+        ],
         areaOfWork: "Food, Electronics, Self Care",
         brandImg: "assets/images/brands/1.png"
       },
       {
         id: "2",
         name: "apple",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iure laborum repellat eos officia dolorem sunt non est perferendis necessitatibus nostrum iusto error doloribus repellendus neque, vel, corporis aliquam quibusdam.",
+        email: "apple@gmail.com",
+        phoneNumber: "0123456789",
+        website: "www.apple.com",
+        socialMedia: [
+          {
+            address: "#",
+            image: "assets/images/social/instagram.png",
+            name: "instagram"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/twitter.png",
+            name: "twitter"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/facebook.png",
+            name: "facebook"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/linkedin.png",
+            name: "linkedin"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/telegram.png",
+            name: "telegram"
+          }
+        ],
         areaOfWork: "Food, Electronics, Self Care",
         brandImg: "assets/images/brands/2.png"
       },
       {
         id: "3",
         name: "shiaomi",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iure laborum repellat eos officia dolorem sunt non est perferendis necessitatibus nostrum iusto error doloribus repellendus neque, vel, corporis aliquam quibusdam.",
+        email: "shiaomi@gmail.com",
+        phoneNumber: "0123456789",
+        website: "www.shiaomi.com",
+        socialMedia: [
+          {
+            address: "#",
+            image: "assets/images/social/instagram.png",
+            name: "instagram"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/twitter.png",
+            name: "twitter"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/facebook.png",
+            name: "facebook"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/linkedin.png",
+            name: "linkedin"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/telegram.png",
+            name: "telegram"
+          }
+        ],
         areaOfWork: "Food, Electronics, Self Care",
         brandImg: "assets/images/brands/3.png"
       },
       {
         id: "4",
         name: "samsung",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor iure laborum repellat eos officia dolorem sunt non est perferendis necessitatibus nostrum iusto error doloribus repellendus neque, vel, corporis aliquam quibusdam.",
+        email: "samsung@gmail.com",
+        phoneNumber: "0123456789",
+        website: "www.samsung.com",
+        socialMedia: [
+          {
+            address: "#",
+            image: "assets/images/social/instagram.png",
+            name: "instagram"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/twitter.png",
+            name: "twitter"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/facebook.png",
+            name: "facebook"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/linkedin.png",
+            name: "linkedin"
+          },
+          {
+            address: "#",
+            image: "assets/images/social/telegram.png",
+            name: "telegram"
+          }
+        ],
         areaOfWork: "Food, Electronics, Self Care",
         brandImg: "assets/images/brands/4.png"
       }
