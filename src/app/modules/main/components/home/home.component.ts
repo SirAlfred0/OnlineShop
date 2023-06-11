@@ -35,6 +35,6 @@ export class HomeComponent implements OnInit {
   onSlideClick(event: any)
   {
     console.log(event);
-    this.router.navigate([''], { queryParams: event.params});
+    this.router.navigate(['/products'], { queryParams: event.params});
   }
 }

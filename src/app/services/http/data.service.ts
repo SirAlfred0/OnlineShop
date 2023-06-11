@@ -3,6 +3,8 @@ import { BestSellers } from "src/app/models/best-sellers.model";
 import { GiftSuggestion } from "src/app/models/gift-suggestion.model";
 import { HomeProduct } from "src/app/models/home-products.model";
 import { NewProduct, NewProducts } from "src/app/models/new-product.model";
+import { Product } from "src/app/models/product.model";
+import { SubCategory } from "src/app/models/sub-category.model";
 
 interface test {
   id: string;
@@ -520,4 +522,99 @@ export class DataService {
       }
     ]
   }
+
+  static subCategories: SubCategory[] = [
+    {
+      title: 'dress',
+      image: 'assets/images/categories/1.png'
+    },
+    {
+      title: 'shoes',
+      image: 'assets/images/categories/2.png'
+    },
+    {
+      title: 'accessories',
+      image: 'assets/images/categories/3.png'
+    },
+    {
+      title: 'sport',
+      image: 'assets/images/categories/4.png'
+    }
+  ]
+
+  static productsByCategory: Product[] = [
+    {
+      category: "Woman And Man Fashion",
+      description: "",
+      image: "assets/images/products/fashion/2.png",
+      price: 10,
+      title: "Man T-Shirt",
+      id: "1"
+    },
+    {
+      category: "Woman And Man Fashion",
+      description: "",
+      image: "assets/images/products/fashion/1.png",
+      price: 60,
+      title: "Man Shirt",
+      id: "2"
+    },
+    {
+      category: "Woman And Man Fashion",
+      description: "",
+      image: "assets/images/products/fashion/3.png",
+      price: 90,
+      title: "Woman Scart",
+      id: "3"
+    },
+    {
+      category: "Elctronics",
+      description: "",
+      image: "assets/images/products/electronics/2.png",
+      price: 600,
+      title: "Laptop",
+      id: "4"
+    },
+    {
+      category: "Elctronics",
+      description: "",
+      image: "assets/images/products/electronics/3.png",
+      price: 450,
+      title: "Mobile",
+      id: "5"
+    },
+    {
+      category: "Elctronics",
+      description: "",
+      image: "assets/images/products/electronics/1.png",
+      price: 500,
+      title: "Computers",
+      id: "6"
+    },
+    {
+      category: "Jewlleries",
+      description: "",
+      image: "assets/images/products/jewleries/1.png",
+      price: 750,
+      title: "Jumkas",
+      id: "7"
+    },
+    {
+      category: "Jewlleries",
+      description: "",
+      image: "assets/images/products/jewleries/3.png",
+      price: 980,
+      title: "Necklaces",
+      id: "8"
+    },
+    {
+      category: "Jewlleries",
+      description: "",
+      image: "assets/images/products/jewleries/2.png",
+      price: 800,
+      title: "Kangans",
+      id: "9"
+    }
+  ];
+  
 }

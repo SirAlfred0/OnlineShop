@@ -4,4 +4,6 @@ export enum Http {
     getGiftSuggestions,
     getBestSellers,
     getNewProducts,
+    getSubCategories,
+    getProductsByCategory
 }

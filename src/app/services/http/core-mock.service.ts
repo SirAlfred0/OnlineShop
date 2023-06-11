@@ -24,6 +24,10 @@ export class CoreMockService {
         return of(DataService.bestSellers)
       case Http.getNewProducts:
         return of(DataService.newProducts)
+      case Http.getSubCategories:
+        return of(DataService.subCategories)
+      case Http.getProductsByCategory:
+        return of(DataService.productsByCategory)
     }
   }
 }
